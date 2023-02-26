@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# script to check and if not found, build the correct version
+# 
+#
+# (c) 2023 Damian Barsotti <damian.barsotti@unc.edu.ar>
+#
+
+mv /usr/local/src/server.properties /minecraft/

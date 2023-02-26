@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# script to check and if not found, build the correct version
+# 
+#
+# (c) 2023 Damian Barsotti <damian.barsotti@unc.edu.ar>
+#
+
+mkdir -p /minecraft/plugins/RaspberryJuice
+
+mv /usr/local/src/raspberryjuice-*.jar /minecraft/plugins/
+
+mv /usr/local/src/*.yml /minecraft/plugins/RaspberryJuice/
