@@ -1,7 +1,7 @@
 # Python Minecraft
 Dockerized Python Minecraft API
 
-## Instruction
+## Install instructions
 
 Run:
 
