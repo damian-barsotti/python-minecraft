@@ -1,0 +1,26 @@
+version: "3.2"
+
+services:
+  spigot-python:
+    build: spigot
+    image: damian-barsotti/spigot-python:1.0
+    container_name: 'spigot-python'
+    environment:
+      SPIGOT_VER: 1.16.3
+      EULA: true
+    ports:
+      - '25565:25565'
+      - '4711:4711'
+    volumes:
+      - ./mc-svr:/minecraft"
+
+  mc-python:
+    build: python
+    image: damian-barsotti/mc-python:1.0
+    working_dir: ${HOME}
+    user: "${UID}:${GID}"
+    tty: true
+    volumes:
+      - ${HOME}:${HOME}
+      - /etc/passwd:/etc/passwd:ro
+      - /etc/group:/etc/group:ro
