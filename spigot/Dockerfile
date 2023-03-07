@@ -17,8 +17,7 @@ RUN git clone https://github.com/zhuowei/RaspberryJuice.git &&\
 RUN mv RaspberryJuice/target/raspberryjuice-*.jar RaspberryJuice/target/classes/*.yml /usr/local/src/
 
 # Clean
-RUN cd .. &&\
-    rm -rf apache-maven-3.9.0-bin.tar.gz apache-maven-3.9.0/ RaspberryJuice/ .m2/
+RUN rm -rf apache-maven-3.9.0-bin.tar.gz apache-maven-3.9.0/ RaspberryJuice/ .m2/
 
 # Add extra files needed
 COPY rootfs /
