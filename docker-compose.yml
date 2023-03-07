@@ -25,3 +25,4 @@ services:
       - ${HOME}:${HOME}
       - /etc/passwd:/etc/passwd:ro
       - /etc/group:/etc/group:ro
+    command: socat TCP-LISTEN:4711,fork TCP:spigot-python:4711
