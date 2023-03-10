@@ -5,8 +5,9 @@ FROM python:${PYTHON_TAG}
 MAINTAINER Damian Barsotti <damian.barsotti@unc.edu.ar>
 
 # install mcpi
-RUN pip install "mcpi==1.2.1"
+RUN pip install "mcpi==1.2.1" idle
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update -q && apt-get install -yq  socat
+RUN apt-get update -q &&\
+    apt-get install -yq  socat

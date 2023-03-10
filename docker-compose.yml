@@ -19,10 +19,13 @@ services:
     build: python
     image: damian-barsotti/mc-python:1.0
     working_dir: ${HOME}
+    environment:
+      - DISPLAY=${DISPLAY}
     user: "${UID}:${GID}"
     tty: true
     volumes:
-      - ${HOME}:${HOME}
+      - ./workdir:${HOME}
       - /etc/passwd:/etc/passwd:ro
       - /etc/group:/etc/group:ro
+      - /tmp/.X11-unix:/tmp/.X11-unix
     command: socat TCP-LISTEN:4711,fork TCP:spigot-python:4711
