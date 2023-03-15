@@ -1,2 +1,4 @@
 /.env
 /mc-svr/
+/workdir/.cache/
+/workdir/.idlerc/
