@@ -12,11 +12,22 @@ See [Docker](https://docs.docker.com/get-docker/).
 
 ```sh
 ./install.sh
-docker compose up -d --build
 ```                      
 
 and wait until
 ```sh
-docker compose logs -f
-```                      
+./logs.sh
+```
 finishes.
+
+### Show Spigot logs
+
+```sh
+mc-log.sh
+```
+
+### Define server operator
+
+```sh
+mc-send.sh op <player name>
+```
