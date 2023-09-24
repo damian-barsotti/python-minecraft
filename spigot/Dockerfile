@@ -4,20 +4,20 @@ FROM nimmis/spigot@${SPIGOT_DIGEST}
 
 MAINTAINER Damian Barsotti <damian.barsotti@unc.edu.ar>
 
-RUN wget https://dlcdn.apache.org/maven/maven-3/3.9.0/binaries/apache-maven-3.9.0-bin.tar.gz
+RUN wget https://dlcdn.apache.org/maven/maven-3/3.9.4/binaries/apache-maven-3.9.4-bin.tar.gz
 
-RUN tar -xzvf apache-maven-3.9.0-bin.tar.gz
+RUN tar -xzvf apache-maven-3.9.4-bin.tar.gz
 
 # Build RaspberryJuice plugin
 RUN git clone https://github.com/zhuowei/RaspberryJuice.git &&\
     cd RaspberryJuice &&\
-    ../apache-maven-3.9.0/bin/mvn package
+    ../apache-maven-3.9.4/bin/mvn package
 
 # Move RaspberryJuice plugin for later use
 RUN mv RaspberryJuice/target/raspberryjuice-*.jar RaspberryJuice/target/classes/*.yml /usr/local/src/
 
 # Clean
-RUN rm -rf apache-maven-3.9.0-bin.tar.gz apache-maven-3.9.0/ RaspberryJuice/ .m2/
+RUN rm -rf apache-maven-3.9.4-bin.tar.gz apache-maven-3.9.4/ RaspberryJuice/ .m2/
 
 # Add extra files needed
 COPY rootfs /
