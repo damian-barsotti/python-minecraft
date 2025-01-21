@@ -15,7 +15,7 @@ services:
 
   mc-python:
     build: python
-    image: damian-barsotti/mc-python:1.0
+    image: damian-barsotti/mc-python:2.0
     working_dir: ${HOME}
     environment:
       - DISPLAY=${DISPLAY}
