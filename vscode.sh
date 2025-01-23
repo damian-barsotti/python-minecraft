@@ -2,4 +2,10 @@
 
 DIRNAME="${0%/*}"
 
-"$DIRNAME"/run.sh codium --no-sandbox "$@"
+RUN="$DIRNAME/run.sh"
+
+"$RUN" codium --list-extensions | grep -q ms-python.python \
+|| "$RUN" codium --no-sandbox --install-extension ms-python.python
+
+
+"$RUN" codium --no-sandbox "$@"
