@@ -1,4 +1,4 @@
 /.env
 /mc-svr/
-/workdir/.cache/
-/workdir/.idlerc/
+/workdir/*
+!/workdir/test/test.py
