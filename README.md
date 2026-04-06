@@ -53,5 +53,5 @@ mc-log.sh
 ### Define server operator
 
 ```sh
-mc-send.sh op <player name>
+./mc-send.sh op <player name>
 ```
