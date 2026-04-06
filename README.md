@@ -55,3 +55,10 @@ mc-log.sh
 ```sh
 ./mc-send.sh op <player name>
 ```
+
+### Restart world
+
+```sh
+/docker-compose.sh down
+```
+and remove `mc-svr` folder
