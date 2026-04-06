@@ -56,7 +56,7 @@ mc-log.sh
 ./mc-send.sh op <player name>
 ```
 
-### Restart world
+### Reset world
 
 ```sh
 /docker-compose.sh down
