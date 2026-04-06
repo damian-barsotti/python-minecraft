@@ -9,7 +9,7 @@ services:
     ports:
       - '25565:25565'
     expose:
-      - '4711:4711'
+      - "4711"
     volumes:
       - ./mc-svr:/minecraft
 
